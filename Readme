@@ -7,3 +7,15 @@ merge sort, and compares how long each one takes to run as theinput size grows.
 The program builds random lists of integers, times both algorithms across five different sizes, and plots the results so the growthrate is obvious through the whole process.
 
 ## Project Overview
+
+The point of this project is to show the difference between a
+quadratic sort and an n log n sort with actual numbers instead of
+just the theory.
+
+Running `main.py` does three things:
+
+1. It checks if both sorts produce correct output on a handful of test cases (empty lists, already sorted lists, duplicates, and equal list).
+2. Times both algorithms on random lists of five sizes, five runs
+   each, and averages the result.
+3. Saves the numbers to a CSV file and plots a comparison graph.
+

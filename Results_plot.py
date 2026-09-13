@@ -14,8 +14,8 @@ def load_results(filename: str = "bench_mark_output.csv") -> list[dict]:
 def plot_comparison(rows: list[dict], output: str = "sorting_comparison.png") -> None:
     sizes = [r["n"] for r in rows]
 
-    plt.plot(sizes, [r["selection_sort"] for r in rows], marker="o", label="Selection Sort")
-    plt.plot(sizes, [r["merge_sort"] for r in rows], marker="o", label="Merge Sort")
+    plt.plot(sizes, [r["selection_sort"] for r in rows], marker="o", color="#9DC02B", label="Selection Sort")
+    plt.plot(sizes, [r["merge_sort"] for r in rows], marker="o", color="#16A085", label="Merge Sort")
 
     plt.xlabel("Input size (n)")
     plt.ylabel("Time (seconds)")
