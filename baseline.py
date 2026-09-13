@@ -1,16 +1,18 @@
 import csv
+import statistics
 import random
 import time
 from pathlib import Path
-
+from timeit import default_timer as timer
 import matplotlib.pyplot as plt
 
-from insertion_sort import insertion_sort
-from merge_sort import mergeSort
+from selection_sort import selection_sort
+from merge_sort import merge_sort
+from random_array_generator import generate_random_array
 
 
 
-SIZES = [500, 1_000, 2_000, 4_000, 8_000]
+SIZES = [500, 1000, 2000, 4000, 8000]
 RANDOM_TRIALS = 5
 OUTPUT_DIR = Path(__file__).resolve().parent
 

@@ -16,3 +16,14 @@ def get_test_cases() -> list[tuple[str, list]]:
         ("bigger sorted list", generate_sorted_array(50)),
         ("bigger random list", generate_random_array(200)),
     ]
+
+def run_correctness_checks() -> None:
+    for name, case in get_test_cases():
+        expected = sorted(case)
+        got_selection = selection_sort(case.copy())
+        got_merge = merge_sort(case.copy())
+        assert got_selection == expected, f"Selection sort failed on: {name}"
+        assert got_merge == expected, f"Merge sort failed on: {name}"
+    print("All correctness checks passed.")
+if __name__ == "__main__":
+    run_correctness_checks()
