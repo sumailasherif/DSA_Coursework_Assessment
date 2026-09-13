@@ -18,3 +18,16 @@ Running `main.py` does three things:
 2. It measures the time taken by  both algorithms on random lists of five sizes, five runseach, and averages the result.
 3. It then saves the numbers to a CSV file and plots a comparison graph and saves that as well in a png file.
 
+## Project Structure
+
+DSA_Coursework_Assessment/
+│
+├── Main.py
+├── selection_sort.py
+├── merge_sort.py
+├── random_arrays.py
+├── test.py
+├── bench_mark_output.py
+├── Results_plot.py
+│
+└── README.md

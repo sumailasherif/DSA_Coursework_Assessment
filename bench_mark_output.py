@@ -57,6 +57,6 @@ def save_results(results: list[dict], filename: str = "bench_mark_output.csv") -
 
 
 if __name__ == "__main__":
-     data = run_benchmark()
-print_growth_check(data)
-save_results(data)
+    data = run_benchmark()
+    print_growth_check(data)
+    save_results(data)
