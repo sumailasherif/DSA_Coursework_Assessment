@@ -15,7 +15,6 @@ just the theory.
 Running `main.py` does three things:
 
 1. It checks if both sorts produce correct output on a handful of test cases (empty lists, already sorted lists, duplicates, and equal list).
-2. Times both algorithms on random lists of five sizes, five runs
-   each, and averages the result.
-3. Saves the numbers to a CSV file and plots a comparison graph.
+2. It measures the time taken by  both algorithms on random lists of five sizes, five runseach, and averages the result.
+3. It then saves the numbers to a CSV file and plots a comparison graph and saves that as well in a png file.
 
