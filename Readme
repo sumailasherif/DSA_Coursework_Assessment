@@ -31,3 +31,73 @@ DSA_Coursework_Assessment/
 ├── Results_plot.py
 │
 └── README.md
+
+
+## File Descriptions
+
+| File | Description |
+|---|---|
+| Main.py | The interactive menu, and the entry point for the full benchmark |
+| selection_sort.py | Selection sort implementation |
+| merge_sort.py | Merge sort implementation |
+| random_arrays.py | Builds the random and sorted test lists |
+| test.py | Correctness checks for both algorithms |
+| bench_mark_output.py | Times both sorts and averages the results |
+| Results_plot.py | Reads the results and draws the comparison graph |
+| README.md | This file |
+
+## Program Flow
+
+Start
+|
+v
+Show menu
+|
+|--- 1 --> Run Selection Sort on current n
+|--- 2 --> Run Merge Sort on current n
+|--- 3 --> Run both and compare their times
+|--- 4 --> Ask for a new value of n
+|--- 5 --> Run correctness checks, benchmark all five sizes, save CSV, plot graph
+|--- 6 --> Exit
+|
+v
+Back to menu (unless 6 was chosen)
+
+
+# Algorithms chosen
+
+## 1. Selection Sort
+
+Selection sort works by repeatedly finding the smallest value left in the unsorted part of the list and putting it in place and going over again until all the list is sorted.
+
+For each pass, selectiuon sort algorithm:
+
+1. Scans the unsorted section for the smallest value.
+2. Swaps it into the first unsorted position.
+3. Moves the sorted/unsorted boundary forward by one.
+4. Repeats until nothing is left unsorted.
+
+## 2. Merge Sort
+
+Merge sort uses a divide and conquer approach which is to split the list down until it can't be split any further, then merge the pieces back together in order.
+
+It therefore:
+
+1. Splits the list into two halves.
+2. Sorts each half recursively.
+3. Merges the two sorted halves back into one sorted list.
+4. Keeps merging up until the whole list is back together, sorted.
+
+#  Comparison of the two sorting algorithms
+
+| Feature | Selection Sort | Merge Sort |
+|---|---|---|
+| Approach | Pick the smallest each pass | Divide and conquer |
+| Best Case | O(n^2) | O(n log n) |
+| Average Case | O(n^2) | O(n log n) |
+| Worst Case | O(n^2) | O(n log n) |
+| Extra Space | O(1) | O(n) |
+| Suitable for large datasets | Generally No | Generally Yes |
+| Implementation | Simple | A bit more involved |
+
+Selection sort always scans the full remaining list no matter what order it started in, so it stays O(n^2) regardless, the benchmark actually proves this, an already sorted list takes it just as long as a random one. Merge sort's divide and conquer approach keeps its growth much gentler, and the comparison graph makes that difference obvious once n gets into the thousands.
