@@ -1,4 +1,4 @@
-"""This helps us to builds random and sorted integers  for testing."""
+"""This helps us to builds random and sorted integers  for our testing."""
 import random
 
 
