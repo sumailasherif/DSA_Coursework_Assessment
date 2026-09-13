@@ -1,1 +1,9 @@
-DSA Sorting Algorithms Coursework
+## DSA Sorting Algorithms Coursework
+
+
+This Data Structures and Algorithms coursework project implements two sorting algorithms, selection sort and
+merge sort, and compares how long each one takes to run as theinput size grows.
+
+The program builds random lists of integers, times both algorithms across five different sizes, and plots the results so the growthrate is obvious through the whole process.
+
+## Project Overview
