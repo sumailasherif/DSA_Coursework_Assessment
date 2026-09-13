@@ -1,2 +1,5 @@
- __pycache__/*
- 
+__pycache__/*
+.vscode/
+*.pyc
+bench_mark_output.csv
+sorting_comparison.png
