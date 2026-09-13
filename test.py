@@ -1,8 +1,7 @@
 """Correctness checks for selection sort and merge sort, run before any timing."""
 from selection_sort import selection_sort
 from merge_sort import merge_sort
-from random_array_generator 
-import generate_random_array, generate_sorted_array
+from random_arrays import generate_random_array, generate_sorted_array
 
 
 def get_test_cases() -> list[tuple[str, list]]:
