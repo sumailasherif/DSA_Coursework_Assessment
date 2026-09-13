@@ -1,34 +1,26 @@
-def mergeSort(arr):
+"""Merge sort has time complexicity of  O(n log n), divide and conquer, returns a new sorted list."""
+
+
+def merge_sort(arr: list) -> list:
     if len(arr) <= 1:
         return arr
-
     mid = len(arr) // 2
-    leftHalf = arr[:mid]
-    rightHalf = arr[mid:]
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return _merge(left, right)
 
-    sortedLeft = mergeSort(leftHalf)
-    sortedRight = mergeSort(rightHalf)
 
-    return merge(sortedLeft, sortedRight)
-
-def merge(left, right):
-    result = []
+def _merge(left: list, right: list) -> list:
+    """Merge two already-sorted lists into one sorted list."""
+    merged = []
     i = j = 0
-
     while i < len(left) and j < len(right):
-        if left[i] < right[j]:
-            result.append(left[i])
+        if left[i] <= right[j]:
+            merged.append(left[i])
             i += 1
         else:
-            result.append(right[j])
+            merged.append(right[j])
             j += 1
-
-    result.extend(left[i:])
-    result.extend(right[j:])
-
-    return result
-
-unsortedArr = [3, 7, 6, 10, 15, 23.5, 55, 13]
-sortedArr = mergeSort(unsortedArr)
-print("Sorted array:", sortedArr)
-
+    merged.extend(left[i:])
+    merged.extend(right[j:])
+    return merged

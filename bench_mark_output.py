@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 from selection_sort import selection_sort
 from merge_sort import merge_sort
-from random_array_generator import generate_random_array
+from random_arrays import generate_random_array, generate_sorted_array 
 
 
 
