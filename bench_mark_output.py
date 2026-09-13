@@ -18,7 +18,6 @@ def time_sort(sort_func, arr: list) -> float:
     return end - start
 
 def average_time(sort_func, n: int, runs: int = RANDOM_TRIALS) -> float:
-    """Fresh random list each run, average the sort time only."""
     times = []
     for _ in range(runs):
         arr = generate_random_array(n)               
