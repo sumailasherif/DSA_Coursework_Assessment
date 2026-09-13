@@ -56,3 +56,8 @@ def save_results(results: list[dict], filename: str = "bench_mark_output.csv") -
         writer.writeheader()
         writer.writerows(results)
     print(f"Results saved to {filename}")
+
+if __name__ == "__main__":
+    data = run_benchmark()
+    print_growth_check(data)
+    save_results(data)
