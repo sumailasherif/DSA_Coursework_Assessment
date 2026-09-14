@@ -90,14 +90,14 @@ It therefore:
 
 #  Comparison of the two sorting algorithms
 
-| Feature | Selection Sort | Merge Sort |
-|---|---|---|
-| Approach | Pick the smallest each pass | Divide and conquer |
-| Best Case | O(n^2) | O(n log n) |
-| Average Case | O(n^2) | O(n log n) |
-| Worst Case | O(n^2) | O(n log n) |
-| Extra Space | O(1) | O(n) |
-| Suitable for large datasets | Generally No | Generally Yes |
-| Implementation | Simple | A bit more involved |
+| Feature |      Selection Sort               |    Merge Sort |
+|--------------------------|-------------------|------------------|
+| Approach |    Pick the smallest each pass     | Divide and conquer |
+| Best Case |       O(n^2)                      | O(n log n) |
+| Average Case | O(n^2)                         | O(n log n) |
+| Worst Case | O(n^2)                            | O(n log n) |
+| Extra Space | O(1)                             | O(n) |
+| Suitable for large datasets | Generally No         | Generally Yes |
+
 
 Selection sort always scans the full remaining list no matter what order it started in, so it stays O(n^2) regardless, the benchmark actually proves this, an already sorted list takes it just as long as a random one. Merge sort's divide and conquer approach keeps its growth much gentler, and the comparison graph makes that difference obvious once n gets into the thousands.
